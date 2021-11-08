@@ -6,22 +6,10 @@ const got = require('got');//! =============== 3
 const chalk = require('chalk');
 
 //! ======================= 1 axios ===================
-const getJokes = async () => {
-  try {
-    return await axios.get('https://api.chucknorris.io/jokes/random')
-  } catch (error) {
-    console.error(error)
-  }
-}
-
-const countjokes = async () => {
-  const jokes = await getJokes()
-
-console.log(chalk.red('fetch using axios :=>'));
-console.log(chalk.green(jokes.data.value));
-}
-
-countjokes()
+axios.get('https://api.chucknorris.io/jokes/random').then(data=>{
+  console.log(chalk.red('fetch using axios :=>'));
+  console.log(chalk.green(data.data.value));
+})
 
 //! ========================= 2 Node.js https =================
 https.get('https://api.chucknorris.io/jokes/random', res => {
