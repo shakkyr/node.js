@@ -1,0 +1,46 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 97vw;
+	
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+
+#navbar {
+	width: 100%;
+	display: flex;
+	background: #31bb2e;
+	color: #fff;
+
+}
+
+
+#navbar a {
+	color: #fff;
+}
+
+#navbar ul {
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#navbar ul li a {
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	text-align: center;
+}
+
+#navbar ul li a.current,
+#navbar ul li a:hover {
+	background: #fff;
+    border-radius: 20%;
+	color: #31bb2e;
+}
